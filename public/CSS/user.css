@@ -1,0 +1,479 @@
+/* .video-container1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow:hidden;
+    z-index: -1;
+  }
+  
+  .video-container1 video {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    pointer-events: none; 
+  } */
+  .video-container1{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.video-container1 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.logo{
+  height: 150px;
+  width: 150px;
+  float: left;
+}
+.header{
+  background-color: rgb(240, 248, 255,.2);
+  height: 15vh;
+  position:fixed;
+  width: 100%;
+  z-index: 1;
+}
+.usernavbar ul{
+  list-style: none;
+  display: flex;
+  margin-left: 20%;
+}
+.usernavbar ul li{
+  margin-right: 6%;
+  font-weight: bolder;
+  margin-top: 4.5%;
+  cursor: pointer;
+}
+.booknow{
+  background: none;
+  border: none;
+  background-color: rgba(110, 188, 162, 0.8);
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: -60px;
+  width: 150px;
+}
+.userbody{
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.maincenter{
+  display: block;
+}
+.maincenter1{
+  margin-top: 3vh;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 130%;
+}
+.maincenter2{
+  margin-top: 2vh;
+  font-size: 400%;
+  color:transparent;
+  -webkit-text-stroke-width: 2px; /* Width of the outline */
+  -webkit-text-stroke-color: black; /* Color of the outline */
+ 
+}
+.maincenter2:hover{
+  background: linear-gradient(to left, white, gray, rgb(86, 83, 83), gray, white);
+  background-clip: text;
+}
+.showusername{
+margin-top: 30vh;
+font-size: 150%;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.searchpanel{
+  width: 80%;
+  height:20vh;
+  background-color: rgb(128, 128, 128,.4);
+margin:9.8% 10% 0%;
+}
+.userpageinput{
+  width: 30%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.searchpanel *{
+  margin-top: 3%;
+}
+.searchpanel label{
+  font-weight: bold;
+  color: antiquewhite;
+}
+.userpagebutton{
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 7px 30px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Increase font size */
+    margin: 2% 45%; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 1s; /* Smooth transition */
+}
+  
+.userpagebutton:hover {
+  background-color:chartreuse; /* Darker green on hover */
+  color: black;
+}
+.useradd1{
+  width: 100%;
+}
+
+.plane{
+  width:50%;
+  height: 105vh;
+  float: left;
+  background:linear-gradient(lightblue,skyblue,lightyellow);
+}
+.leftplane{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.useradd1 h1
+{
+  padding:0% 5%;
+}
+.useradd1 p
+{
+  margin-top:5%;
+  padding:0% 5%;
+  font-size: 20px;
+}
+.searchdest{
+  width: 40%;
+  margin: 2% 5%;
+  padding: 2% 1%;
+}
+.leftplane div{
+  width: 80%;
+  margin: 50% 20% 0%;
+}
+.leftplane :nth-child(3),.leftplane :nth-child(4){
+  margin-top: 10%;
+}
+
+.leftplane div img{
+  width: 70px;
+  height:70px;
+
+}
+.leftplane div p{
+padding: 0;
+font-size: large;
+}
+.adventure{
+  background-color: rgb(30, 117, 152);
+  width: fit-content;
+}
+.stories{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.potraitimage{
+margin: 25% 10% 0%;
+  width: 80%;
+  height: 70vh;
+}
+.plane2{
+  width:50%;
+  height: 105vh;
+  float: left;
+  background-color:lavender;
+}
+.plane2 h1{
+  background-color: rgb(137, 103, 179,.5);
+  padding:0 ;
+  text-transform: capitalize;
+  text-shadow: #5a0cba 1px 0 10px;
+}
+.plane2 h2{
+color:#5a0cba ;
+}
+
+.bestplace{
+  background:linear-gradient(lightblue,skyblue,lightyellow);
+  width: 100%;
+  height: 100vh;
+  float: left;
+}
+.bestplacecontainer div{
+  width: 20%;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+   overflow: hidden;
+}
+.bestplacecontainer{
+  display: flex;
+justify-content: space-around;
+}
+.munnar{
+  background-image: url("https://media.gettyimages.com/id/1156723987/photo/winding-road-through-serene-munnar-tea-plantations-in-india.jpg?s=612x612&w=0&k=20&c=z8jiCaF2jnsGEO6oLhmPdv84Zr-D6vf2NRsVqkdIrWk=");
+}
+.bestplacecontainer :nth-child(2){
+  background-image: url("https://images.pexels.com/photos/12377224/pexels-photo-12377224.jpeg?auto=compress&cs=tinysrgb&w=600");
+}
+.bestplacecontainer :nth-child(3){
+  background-image: url("https://media.gettyimages.com/id/1450380245/photo/portrait-of-lion-sitting-on-field-gir-national-park-gujarat-india.jpg?s=612x612&w=0&k=20&c=y8NMT1zpmWD1qs3xM827-tRaaC6OlKpbhXm245Q4ojM=");
+}
+.bestplacecontainer :nth-child(4){
+  background-image: url("https://cdn.pixabay.com/photo/2021/02/15/13/09/himalayas-6017764_640.jpg");
+}
+.bestplacecontainer div span{
+  width: 30%;
+  display: inline-block;
+  margin-top: 100%;
+  margin-left: 70%; 
+   border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  text-align: center;
+  color: white;
+  font-size: large;
+  background-color: rgb(0, 0, 0,.5);
+  
+}
+.bestplacecontainer div:hover span{
+  width: 40%;
+  margin-left: 60%;
+  background-color: gray;
+}
+.bestpackages{
+  width: 100%;
+  height: auto;
+  background:linear-gradient(plum,lavender,lavenderblush,lavender,plum);
+  float: left;
+}
+.packagescontainer{
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10%;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  position: relative;
+}
+.packages{
+  width: 30%;
+  height: 75vh;
+  background-color: #ffffff;
+  margin-bottom: 5%;
+background-color: rgba(255, 255, 255, 0.3);
+   position: relative;
+}
+.packageimage{
+  width: 100%;
+  height: 60%;
+}
+.packagespan{
+width:40%;
+display: inline-block;
+background-color: aliceblue;
+padding:2%;
+text-align: center;
+text-transform:uppercase;
+border-radius: 40px;
+position: absolute;
+top: 56%;
+left: 28%;
+right: 28%;
+}
+@keyframes spin {
+  0%{
+    /* transform: rotate(0deg); */
+    scale: 1;
+  }
+  50%{
+    scale:1.1;
+  }
+  100%{
+    /* transform: rotate(360deg); */
+    scale:1;
+  }
+}
+.packageicons{
+  width:40px;
+  height: 40px;
+  margin: 3% 1% 3% 5%;
+}
+.packages:hover .packagespan{
+  background-color: black;
+  color: white;
+  animation:spin 1s ease-in;
+}
+.touristfeedback{
+  width: 100%;
+  height: 100vh;
+  background:linear-gradient(lightblue,skyblue,lightyellow);
+    float: left;
+}
+.slider{
+  width: 90%;
+  margin: 0% 1%;
+  background-color: rgb(157, 221, 221);
+  display: flex;
+  overflow-x: scroll;
+}
+.internalcontainer{
+width: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 20px;
+padding: 10px;
+flex: none;
+}
+.sliderwrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrowbutton{
+  width: 3%;
+  height: 3%;
+  cursor:pointer;
+}
+.slider::-webkit-scrollbar{
+  display: none;
+}
+.sliderbox:hover{
+  /* transform: scale(1.1); */
+}
+.sliderbox{
+  height: 50vh;
+  width: 100%;
+  background:radial-gradient(pink,skyblue,rgb(251, 224, 233),lightgreen);
+}
+.footercontainer{
+  width: 100%;
+  height: 100vh;
+  background:url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=600");
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.innerfooter{
+  width: 80%;
+  margin:10% 10% 5%;
+  background-color: rgb(245, 245, 245,.1);
+border-style:groove;
+box-shadow: 20px 20px 50px rgb(55, 55, 55);
+}
+.keytopics{
+  display: flex;
+  margin-bottom: 3%;
+}
+.keytopics h3{
+  width: 25%;
+padding: 0% 2%;
+margin-top: 3%;
+}
+.ulist{
+ list-style-type: none;
+ padding: 0;
+}
+.ulist li{
+  padding-bottom: 8%;
+  cursor: pointer;
+}
+.ulist li:hover{
+font-weight: bold;
+}
+.keytopicscontent{
+  display: flex;
+}
+.keytopicscontent div{
+  width: 25%;
+  font-size: large;
+  padding:0% 2%;
+}
+.questionicons{
+width: 10%;
+height: 10%;
+margin-right: 3%;
+}
+.Questioncontainer div{
+  display: flex;
+  width: 100%;
+  margin-bottom: 10%;
+}
+.socialmediaicons{
+  width: 70%;
+  height: 70%;
+  filter: grayscale(100%); /* Default to grayscale */
+  transition: filter 1s;
+  margin: 50% 50% 3% 0%;
+}
+.socialmediaicons:hover{
+  filter: grayscale(0%);
+  animation:spinme 1s linear;
+}
+@keyframes spinme {
+  0%{
+    scale: 1;
+    rotate: 0deg;
+  }
+  25%{
+    scale: 1.2;
+    rotate: 90deg;
+  }
+  50%{
+    scale: 1.5;
+    rotate: 180deg;
+  }
+  75%{
+    scale: 1.2;
+    rotate: 270deg;
+  }
+  100%{
+    scale: 1;
+    rotate: 360deg;
+  }
+
+}
+.vacationcontent div{
+  display: flex;
+}
+.copyright{
+  text-align: center;
+  font-size: 120%;
+  font-weight: 500;
+}
+.aboutpage{
+  width: 100%;
+  height: 100vh;
+  background: url("https://wallpaperaccess.com/full/185289.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aboutpage :nth-child(2) span:hover{
+  color:lime;
+  cursor: pointer;
+}

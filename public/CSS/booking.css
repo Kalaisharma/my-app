@@ -1,0 +1,249 @@
+.bookingcontainer {
+  width: 100%;
+  height: 100vh;
+  background: url("https://shelfstudio.com/wp-content/uploads/2018/12/10-company-booking-background.jpg");
+  background-size: cover;
+  float: left;
+}
+.bookingbox {
+  backdrop-filter: blur(10px) saturate(100%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  background-color: transparent;
+  width: 60%;
+  margin: 3% 20%;
+  float: left;
+}
+.bookingrows {
+  margin: 6% 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.bookingrows div {
+  width: 45%;
+}
+.bookingrows div .input {
+  width: 100%;
+}
+.datesection {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.datesection div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bookingbutton {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  margin: 0% 0% 5%;
+}
+.bookingbutton button {
+  width: 15%;
+  padding: 0.5% 0%;
+  background: rgb(38, 138, 225, 0.6);
+  border: none;
+  font-weight: bold;
+  color: whitesmoke;
+}
+.errorspan {
+  display: block;
+  color: red;
+  position: absolute;
+}
+/* packageType component CSS */
+.packagecontainer {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(100, 13, 95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+}
+.packageinnercontainer {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.membershipcontainer {
+  background-color: #fbfbfb;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2%;
+}
+.membershipcontainer:hover {
+  box-shadow: 0 0 10px #ffeb55, 0 0 20px #ffeb55, 0 0 30px #ffeb55,
+    0 0 40px #ffeb55;
+  border-radius: 10px;
+  animation: glowing 1.5s infinite linear;
+  border: 2px solid #640d5f;
+}
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 20px #ffeb55;
+  }
+  50% {
+    box-shadow: 0 0 50px #ffeb55;
+  }
+  100% {
+    box-shadow: 0 0 20px #ffeb55;
+  }
+}
+.packageinnercontainer :nth-child(1) .PackageName {
+  color: #cd7f32;
+}
+.packageinnercontainer :nth-child(2) .PackageName {
+  color: rgb(167, 165, 165);
+}
+.packageinnercontainer :nth-child(3) .PackageName {
+  color: gold;
+}
+.membershipcontainer p {
+  font-size: large;
+  font-weight: 400;
+}
+.iconscorner {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  img {
+    width: 10%;
+  }
+}
+.placetag {
+  color: #fbfbfb;
+  text-shadow: 3px 3px #ffeb55;
+  margin: 0;
+  padding: 0;
+}
+.changetheplace {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.bookatour {
+  margin-top: 2%;
+  text-align: center;
+  animation: random 5s linear infinite;
+}
+@keyframes random {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  10% {
+    opacity: 0.1;
+    scale: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+    scale: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+    scale: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+    scale: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+    scale: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+    scale: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+    scale: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+    scale: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+    scale: 0.9;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: whitesmoke;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  top: 5%;
+  left: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  transform: translateY(-50%);
+}
+/* destination css */
+.destinationcontainer {
+  width: 100%;
+  min-height: auto; /* Ensures the container covers the full viewport height */
+  background: linear-gradient(
+    to right,
+    #000000,
+    #1a1a1a,
+    #333333,
+    #4d4d4d,
+    #666666
+  );
+  float: left;
+}
+
+.destinationgrid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.nofav {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    #000000,
+    #1a1a1a,
+    #333333,
+    #4d4d4d,
+    #666666
+  );
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

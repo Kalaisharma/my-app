@@ -1,0 +1,76 @@
+.bookingcardcontainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: burlywood;
+  float: left;
+}
+.cardbox {
+  width: 90%;
+  margin: 5%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  background-color: cadetblue;
+}
+.leftcard {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 2%;
+}
+.bookingcards {
+  width: 45%;
+  background-color: rgb(240, 255, 240, 0.3);
+  height: auto;
+  display: flex;
+  backdrop-filter: 20px;
+  margin-bottom: 5%;
+  position: relative; /* Ensure the element is positioned relative to its container */
+  left: -110%; /* Start off-screen to the left */
+  animation: slide-in 1s forwards; /* Animation name, duration, and fill mode */
+}
+@keyframes slide-in {
+  from {
+    left: -110%; /* Start position */
+  }
+  to {
+    left: 0; /* End position */
+  }
+}.rightcard {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.countpanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid black;
+}
+.countpanel div {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.rightcard img {
+  width: 50px;
+  height: 50px;
+  margin-left: 30%;
+}
+.leftcard label {
+  font-size: large;
+  font-weight: 700;
+  background-color: aliceblue;
+  width: fit-content;
+}
+.leftcard span {
+  font-size: larger;
+}

@@ -1,0 +1,244 @@
+.row{
+    width: 100%;
+    float: left;
+    background-color: rgba(233, 229, 224, 0.3);
+}
+.row div{
+    width: 30%;
+    float: left;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+.mainform{
+    width: 100%;
+    float: left;
+    height: 100vh;
+    background-image:url('https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg');
+   background-size: cover;
+}
+.heading{
+    margin-left: 45%;
+    margin-bottom: 4%;
+    margin-top: 2%;
+}
+.label{
+    display: block;
+    margin: 2% 0%;
+    font-weight: bolder;
+}
+.submit{
+    margin-left: 40%;
+    width: 100px;
+    padding: 4px 0px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+.reset{
+    margin-left: 1%;
+    width: 100px;
+    padding: 4px 0px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+.input{
+    width: 80%;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px;
+    background-color: rgb(255, 255, 255,0.5);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.button{
+    margin-top:2%;
+    background-color: rgb(240, 248, 255,0.3);
+    font-weight: bolder;
+}
+.count{
+    padding: 0% 3%;
+}
+.counthead{
+    margin-left: 2%;
+    font-weight:500;
+}
+.valuebutton{
+    height:30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 0.5px solid black;
+    background: none;
+    margin-left: 5px;
+    text-align: center;
+    font-size:medium;
+    animation-play-state: paused;
+}
+.valuebutton:hover{
+    animation: rotate 2s ease-in-out infinite;
+   
+}
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+/* login page css */
+.login{
+    border:0.5px solid black;
+    width: 50%;
+    margin-left: 25%;
+    background-color: rgb(255, 255, 255,0);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    padding: 10px 4px;
+    border-radius: 20px;
+}
+.loginform{
+    width: 100%;
+    float: left;
+}
+.login:focus{
+    border-color: rgb(139, 220, 117);
+    box-shadow: 0 0 10px rgb(139, 220, 117);
+}
+.innercontainer{
+    position: absolute;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.3);
+    height:auto;
+    margin-left: 30%;
+    margin-top: 15vh;
+    /* border-top-left-radius: 40%;
+    border-bottom-right-radius: 40%; */
+    border-top-right-radius: 40%;
+    border-bottom-left-radius: 40%;
+}
+.loginicon{
+    width:80px;
+    height:80px;
+   margin-left: 45%;
+   margin-top: 30px;
+}
+.loginlabel{
+    margin-left: 25%;
+}
+.video-container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+.logbutton{
+margin-bottom: 20px;
+margin-top: 30px;
+background-color: rgb(255, 248, 255,0);
+margin-left: 40%;
+}
+.logbutton:active{
+    background-color: rgb(240, 248, 255,0.5);
+}
+.forgot{
+    display: block;
+    background: none;
+    text-decoration: underline;
+    font-size: 15px;
+    border:0;
+    margin-left: 25%;
+    margin-top:2%;
+}
+
+.sign{
+    text-decoration: underline;
+    border: 0;
+    background: none;
+    font-size: 15px;
+    color: white;
+  }
+/* .alert-wrapper {
+    position: relative;
+  } */
+.alertme{
+    position: absolute;
+    left: 550px;
+    width:400px;
+    top:20px;
+}  
+.alertdiv{
+    left: 72%;
+    width:400px;
+    top: -7px;
+}
+/* for forgot password */
+.forgot-input{
+    width: 80%;
+    margin: 2% 10% 0%;
+    padding: 2% 2%;
+}
+.forgotpass{
+    width: 100%;
+    height: 100vh;
+    background: url('./forgotpassword.jpg');
+    background-size: contain;
+    float: left;
+    background-repeat: no-repeat;
+    background-color: #20c997;
+}
+.forgot-label{
+    margin-left: 10%;
+    margin-top: 5%;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.update{
+    display: inline-block;
+    width: 80%;
+    margin: 8% 10% 5%;
+    background-color: rgb(240, 248, 255,0.3);
+    border: none;
+    border-radius: 20px;
+    padding: 2% 2%;
+    font-weight: bold;
+    color: whitesmoke;
+}
+.forgotcontainer{
+    width:30%;
+    margin: 20vh 60% ;
+    height: 60vh;
+    background-color: rgb(255, 255, 255,0.3);
+    padding: 3% 0% 5%;
+}
+.h3{
+    margin-left: 20%;
+    margin-top: 200px;
+}
+.update:active{
+    border:3px solid #0d6efd;
+}
+.newpass{
+    width: 100%;
+    height: 100vh;
+    background: url('./newpassword.jpg');
+    background-size:contain;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #0d6efd;
+}
+.newpasscontainer{
+    width:30%;
+    margin: 10vh 10% ;
+    height: auto;
+    background-color: rgb(255, 255, 255,0.3);
+    padding: 3% 0% 5%;
+}
