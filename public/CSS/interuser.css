@@ -1,0 +1,96 @@
+.interlogo{
+    width: 10%;
+    background-color: black;
+    color: white;
+   font-size: xx-large;
+   text-align: center;
+   float: left;
+height:15vh;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+margin-left: 5%;
+}
+.interusermain{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    float: left;
+   background-color:whitesmoke;
+}
+.intertoursheets{
+    width: 100%;
+    margin:10% 0%;
+    display: flex;
+    height: auto;
+    gap: 1%;
+    background-color: antiquewhite;
+    background-color: black;
+}
+.sheets{
+    background-color: rgb(146, 193, 142);
+ flex: 1;
+ height: 60vh;
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   filter: blur(2px);
+     -webkit-filter: blur(2px); /* For Safari */
+}
+.sheets h4{
+    opacity: 0;
+    text-align: center;
+        margin-top: 2%;
+}
+.sheets span{
+    display: inline-block;
+    padding: 2%;
+     opacity: 0;
+    text-align: center;
+        margin-top: 2%;
+}
+.sheets:nth-child(even){
+    margin:4% 0% 1%;
+}
+.sheets:nth-child(odd){
+    margin:1% 0% 4%;
+}
+.sheets:hover{
+    transition:1s ease-in;
+    filter: blur(0px);
+     -webkit-filter: blur(0px);
+    /* width: 40%; */
+    flex:2.5;
+    &.sheets h4,span{
+      opacity: 1;
+      transition: 1s linear;
+      transition-delay: 1s;
+    }
+}
+.sheets:nth-child(1){
+    background-image: url("https://media.gettyimages.com/id/509820107/photo/traditional-cormorant-fishermen-on-li-river.jpg?s=612x612&w=0&k=20&c=3SDUUNeOPLGNB49H8PlmLkClmAnjREAdSGkdXkO4A_o=");
+
+}
+.sheets:nth-child(2){
+    background-image: url("https://media.gettyimages.com/id/1463782179/photo/scenic-mediterranean-seascape-at-sunrise.jpg?s=612x612&w=0&k=20&c=4zXhRYZP9ijzleE3ndPokdMVx90HvvDf1bnAP1MxyIQ=");
+    
+}
+.sheets:nth-child(3){
+    background-image: url("https://media.gettyimages.com/id/171323330/photo/carribean-beach.jpg?s=612x612&w=0&k=20&c=X-x0Bk30nxXHEn8zpxJX7chD8eK3ZeKO5LNTzMUZafc=");
+    
+}
+.sheets:nth-child(4){
+    background-image: url("https://media.gettyimages.com/id/1854815363/photo/etihad-towers-and-other-skyscrapers.jpg?s=612x612&w=0&k=20&c=lci45LjSzHXulM28KsSNn0N8b0JOc_jXD3U1vwBGdoQ=");
+    
+}
+.sheets:nth-child(5){
+    background-image: url("https://media.gettyimages.com/id/1827361873/photo/the-world-famous-iconic-green-lady-statue-of-liberty.jpg?s=612x612&w=0&k=20&c=DNuzh_cY1RDewPU7i-fVa7CTumqvLLjJ84Cy7Z7Fn8c=");
+    
+}
+.sheets:nth-child(6){
+    background-image: url("https://media.gettyimages.com/id/966449742/photo/tourists-at-the-taj-mahal-in-agra-india-british-era.jpg?s=612x612&w=0&k=20&c=KwybE_3TfsgU8jPiFH258fZZ0FQdmaYcmwVDhvuqYXk=");
+    
+}
+.sheets:nth-child(7){
+    background-image: url("https://media.gettyimages.com/id/171155842/photo/african-city-traffic.jpg?s=612x612&w=0&k=20&c=T01Zx7e5ApFfUiLsuZ3I9AdjjqyI4HjJE3WbMThJDyc=");
+   
+}

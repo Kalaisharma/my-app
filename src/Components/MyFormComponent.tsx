@@ -213,7 +213,7 @@ async function handleSubmit(e:React.MouseEvent<HTMLButtonElement>){
     if(response.status===200){
       alert(response.data.message)
     }
-    navigate('/login')}
+    navigate('/login')}   
     catch(error:any){
 if(error.response.status===400){
   setShow(true)

@@ -30,18 +30,21 @@ if(response?.status===200){
   }
 const{email}=emailcontext
   const handleClick = async (el: any) => {
-    const val: string | null = sessionStorage.getItem('visible')
-      const data:favdata= {
-    placeid:el.placeid,
-    img:el.img,
-    name:el.name,
-desc:el.description,
-email:email,
-        visible: JSON.parse(val ? val:'')
-  }
-if(email===""){
+    if (email === '') {
+  console.log("hkgjdfhgjshjhgjkdfhgsjdhgdfgdfsghgui");
+  
   alert("Please Login to add Favourites");
-}else{
+}
+    else {
+      const val: string | null = sessionStorage.getItem("visible");
+      const data: favdata = {
+        placeid: el.placeid,
+        img: el.img,
+        name: el.name,
+        desc: el.description,
+        email: email,
+        visible: JSON.parse(val ? val : ""),
+      };
 const response=await getFavourites(data);
 if(response?.status===200){
   console.log(response);

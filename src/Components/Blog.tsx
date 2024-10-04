@@ -17,7 +17,6 @@ const TipsandBlogs = () => {
   const two = useRef<HTMLSpanElement>(null);
   const three = useRef<HTMLSpanElement>(null);
   const getdata = async () => {
-    debugger;
     const response = await getblogdata();
     if (response?.status === 200) {
       console.log(response.data, "lllll");

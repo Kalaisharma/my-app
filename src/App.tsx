@@ -15,6 +15,7 @@ import Videopage from './Components/Videopage';
 import Myform from './Components/MyFormComponent';
 import Forgotpassword from './Components/Forgotpassword';
 import NewPassword from './Components/NewPassword';
+import InterUser from './Components/InternationalUserPage';
 export const MyContext = createContext<MyContextType | undefined>(undefined);
 export const VisibleContext = createContext<VisibleContextType | undefined>(undefined);
 export const VisibleRemoveContext = createContext<VisibleRemoveContextType | undefined>(undefined);
@@ -40,13 +41,14 @@ function App() {
               <Route path="/blog" element={<TipsandBlogs />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/booking" element={<Booking />} />
-              <Route path="/bookingcard" element={<Bookingcard />} /> 
-              <Route path="/video" element={<Videopage/>} />
+              <Route path="/bookingcard" element={<Bookingcard />} />
+              <Route path="/video" element={<Videopage />} />
               <Route path="/signup" element={<Myform />} />
               {/* <Route path="/grid" element={<MyGrid />} /> */}
-              
+
               <Route path="/forgotpassword" element={<Forgotpassword />} />
               <Route path="/newpassword" element={<NewPassword />} />
+              <Route path="/interuser" element={<InterUser />} />
             </Routes>
           </BrowserRouter>
         </VisibleRemoveContext.Provider>
