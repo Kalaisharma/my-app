@@ -35,6 +35,7 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    pointer-events: none;
 }
 .logo{
   height: 150px;
@@ -98,8 +99,17 @@
   background-clip: text;
 }
 .showusername{
-margin-top: 30vh;
+margin: 30vh 0% 2%;
 font-size: 150%;
+background:none;
+border:1px solid;
+&:hover{border-bottom: 3px solid;}
+padding: 0.5% 1%;
+border-radius: 2rem;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.username{
+  font-size: 150%;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .searchpanel{

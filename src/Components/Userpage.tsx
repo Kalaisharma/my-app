@@ -120,7 +120,7 @@ const onBook=()=>{
     alert("Please Login")
   }
 }
-    return(
+    return (
       <>
         <div className="usermain">
           <div className="video-container1">
@@ -191,7 +191,7 @@ const onBook=()=>{
               position: "absolute",
               top: "15%",
               fontWeight: "bolder",
-              color:"yellow"
+              color: "yellow",
             }}
             direction="left"
             speed={100}
@@ -204,7 +204,10 @@ const onBook=()=>{
             across the globe.
           </Marquee>
           <div className="userbody">
-            <span className="maincenter showusername">Hi Buddy,</span>
+            <button className="maincenter showusername" onClick={()=>navigate('/interuser')}>
+             Explore our International Trips!
+            </button>
+            <span className="maincenter username">Hi Buddy,</span>
             <span className="maincenter maincenter1">
               Travel to any place in India with ease and comfort
             </span>
