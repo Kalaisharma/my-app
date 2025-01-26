@@ -1,34 +1,36 @@
 import { useNavigate } from "react-router-dom"
 import userpagelogo from '../Assets/Designer.png'
 import {Card} from 'react-bootstrap';
-import { useState,useEffect, useContext } from "react";
+import { useState,useEffect, useContext, useCallback } from "react";
 import { removeFavourites, userFavourites } from "../Service/TourService";
 import { MyContext } from "../App";
-import { MyContextType } from "../Interfaces/Interface";
 
 const Favourites=()=>{
     const[favdata,setfavdata]=useState([])
     const[checktrue,settrue]=useState(false)
-    useEffect(()=>{
-        getData()
-    },[])
+  
   const context = useContext(MyContext)
    if (!context) { //because your context may also be undefined
     throw new Error('MyComponent must be used within a MyProvider');
   }
   const { email } = context;
-    const getData=async()=>{
-   try{ const response=await userFavourites(email);
-    if(response?.status===200){
+  const getData = useCallback(async () => {
+    try {
+      const response = await userFavourites(email);
+      if (response?.status === 200) {
         setfavdata(response?.data)
-    }}
-    catch(error:any){
-      console.log(error,"component");
-      if(error?.response.data==='no data'){
-settrue(true)
       }
-  }
     }
+    catch (error: any) {
+      console.log(error, "component");
+      if (error?.response.data === 'no data') {
+        settrue(true)
+      }
+    }
+  }, [email]);
+    useEffect(() => {
+      getData();
+    }, [getData]);
   const removeData = async (el:any) => {
       console.log(email,"ugifgkykjtyghjghjfjfyufyu");
       

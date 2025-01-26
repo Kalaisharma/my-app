@@ -1,4 +1,4 @@
-import { ReactElement, useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { getDestination, getFavourites } from "../Service/TourService";
 import {Card,Alert} from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
