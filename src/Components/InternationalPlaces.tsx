@@ -1,21 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { getPlaces } from '../Service/Internationalservice';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const InternationalPlaces = () => {
-    useEffect(() => {
-        InterPlaces()
-    }, [])
+
   const location = useLocation();
   const{refid} = location.state;
     const[placedata,setplacedata]=useState([])
-  const InterPlaces = async () => {
-        const response = await getPlaces(refid);
-        if (response?.status == 200) {
-            setplacedata(response.data);
-        }
+  const InterPlaces = useCallback(async () => {
+    const response = await getPlaces(refid);
+    if (response?.status === 200) {
+      setplacedata(response.data);
     }
+  }, [refid]);
+      useEffect(() => {
+        InterPlaces();
+      }, [InterPlaces]);
     const placebindings = () => {
       console.log(placedata);
 

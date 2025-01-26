@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { bookingTour, getMembership } from "../Service/Formservice";
 import { useNavigate } from "react-router-dom";
 import { MyContext } from "../App";
@@ -28,7 +28,20 @@ const Booking = () => {
    if (!context) { //because your context may also be undefined
     throw new Error('MyComponent must be used within a MyProvider');
   }
-  const {email} = context;
+  const { email } = context;
+  const [cityid, setcityid] = useState(0);
+  const getMembershipdata = useCallback(async () => {
+    const response = await getMembershipData(cityid);
+    if (response?.status === 200) {
+      setmembershipdata(response.data);
+    }
+  }, [cityid]);
+  const tourdata = useCallback(async () => {
+    let trimmedStr = bookingdata?.membership?.replace(/\s+/g, "").trim();
+    console.log(trimmedStr, "trim");
+    const response = await getTourData(trimmedStr);
+    settourdata(response.data);
+  }, [bookingdata]);
   useEffect(() => {
     membershipData();
     if (bookingdata.membership !== "") {
@@ -37,14 +50,13 @@ const Booking = () => {
     if (bookingdata.city !== "") {
       getMembershipdata();
     }
-  }, [bookingdata]);
+  }, [bookingdata,getMembershipdata,tourdata]);
  
   const navigate = useNavigate();
   const [tourview, settourview] = useState(false);
     const [dateview, setdateview] = useState(false);
   const [packageview, setpackageview] = useState(false);
   const [duration, setduration] = useState<string | null>("");
-  const [cityid, setcityid] = useState(0);
   const handleChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
     setbookingdata({ ...bookingdata, [name]: value });
@@ -186,15 +198,10 @@ const Booking = () => {
       settourview(true);
     }
   };
-
+ 
   const [gettourdata, settourdata] = useState([]);
 
-  const tourdata = async () => {
-    let trimmedStr = bookingdata?.membership?.replace(/\s+/g, "").trim();
-    console.log(trimmedStr, "trim");
-    const response = await getTourData(trimmedStr);
-    settourdata(response.data);
-  };
+  
   const getPlaceName = (cityname:string, placeid:number) => {
     setbookingdata({ ...bookingdata, city: cityname });
     setcityid(placeid);
@@ -203,7 +210,7 @@ const Booking = () => {
   };
   function liked() {}
   const tourbinding = () => {
-    return gettourdata.map((el:any) => {
+    return gettourdata.map((el: any): React.ReactNode | null=> {
       if (bookingdata.membership === "City and Beaches")
         return (
           <>
@@ -283,17 +290,15 @@ const Booking = () => {
           </>
         );
       }
+      return null;
     });
+
   };
+
 
   const [membershipdata, setmembershipdata] = useState([]);
 
-  const getMembershipdata = async () => {
-    const response = await getMembershipData(cityid);
-    if (response?.status === 200) {
-      setmembershipdata(response.data);
-    }
-  };
+  
   const toBooking = (packagename:string, days:string) => {
     setpackageview(false);
     settourview(false);

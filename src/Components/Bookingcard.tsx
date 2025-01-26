@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { MyContext } from "../App";
 import { myBookings } from "../Service/TourService";
 import { useNavigate } from "react-router-dom";
@@ -10,15 +10,16 @@ const Bookingcard = () => {
   }
   const {email} = context;
   const [bookingcard, setbookingcard] = useState([]);
-  useEffect(() => {
-    getData();
-  }, []);
-  const getData = async () => {   
+ 
+  const getData = useCallback(async () => {   
     const response = await myBookings(email);
     if (response?.status === 200) {
       setbookingcard(response?.data);
     }
-  };
+  }, [email]);
+   useEffect(() => {
+     getData();
+   }, [bookingcard, getData]);
 const navigate=useNavigate()
   const dataBinding = () => {
     return bookingcard?.map((el:any) => {

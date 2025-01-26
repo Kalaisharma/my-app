@@ -2,7 +2,6 @@ import location from '../../Assets/minilogos/location.png'
 import locationpin from '../../Assets/minilogos/location-pin.png'
 import summercamp from '../../Assets/minilogos/summer-camp.png'
 import destination from '../../Assets/minilogos/destination.png'
-import { useNavigate } from 'react-router-dom'
 const Detailspage:React.FC = () => {
 return<>
  <div className="useradd1">
