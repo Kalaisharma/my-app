@@ -64,7 +64,7 @@ const NewPassword=()=>{
                                 if (response?.status === 200) {
                                   navigate("/login");
                                 }
-                              } catch (error) {
+                              } catch (error: any) {
                                 if (error.response?.status === 400) {
                                   setmessage((prevstate) => ({
                                     ...prevstate,
@@ -80,6 +80,7 @@ const NewPassword=()=>{
                             }
                           }
                         };
+
                         const handleChange = (
                           e: React.ChangeEvent<HTMLInputElement>
                         ) => {
