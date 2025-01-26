@@ -16,6 +16,7 @@ import Myform from './Components/MyFormComponent';
 import Forgotpassword from './Components/Forgotpassword';
 import NewPassword from './Components/NewPassword';
 import InterUser from './Components/InternationalUserPage';
+import InternationalPlaces from './Components/InternationalPlaces';
 export const MyContext = createContext<MyContextType | undefined>(undefined);
 export const VisibleContext = createContext<VisibleContextType | undefined>(undefined);
 export const VisibleRemoveContext = createContext<VisibleRemoveContextType | undefined>(undefined);
@@ -45,6 +46,7 @@ function App() {
               <Route path="/video" element={<Videopage />} />
               <Route path="/signup" element={<Myform />} />
               {/* <Route path="/grid" element={<MyGrid />} /> */}
+              <Route path="/interplaces" element={<InternationalPlaces />} />
 
               <Route path="/forgotpassword" element={<Forgotpassword />} />
               <Route path="/newpassword" element={<NewPassword />} />
