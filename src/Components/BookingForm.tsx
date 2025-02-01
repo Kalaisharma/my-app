@@ -211,21 +211,21 @@ const Booking = () => {
   function liked() {}
   const tourbinding = () => {
     return gettourdata.map((el: any): React.ReactNode | null=> {
-      if (bookingdata.membership === "City and Beaches")
+      if (bookingdata.membership === "City and Beach")
         return (
           <>
             <Card className="Card">
               <Card.Img
                 variant="top"
-                src={el.cityimghref}
+                src={el.img}
                 className="cardimg"
               />
               <Card.Body className="cardbody">
-                <Card.Title className="cardtitle">{el.cityname}</Card.Title>
+                <Card.Title className="cardtitle">{el.citybeachname}</Card.Title>
                 <Card.Title className="heart" onClick={liked}>
                   <HeartIcon />
                 </Card.Title>
-                <Card.Text className="cardtext">{el.citycontent}</Card.Text>
+                <Card.Text className="cardtext">{el.description}</Card.Text>
                 <Card.Footer
                   className="click"
                   onClick={() => {
@@ -242,13 +242,13 @@ const Booking = () => {
         return (
           <>
             <Card className="Card">
-              <Card.Img variant="top" src={el.forestimg} className="cardimg" />
+              <Card.Img variant="top" src={el.img} className="cardimg" />
               <Card.Body className="cardbody">
                 <Card.Title className="cardtitle">{el.forestname}</Card.Title>
                 <Card.Title className="heart" onClick={liked}>
                   <HeartIcon />
                 </Card.Title>
-                <Card.Text className="cardtext">{el.forestdesc}</Card.Text>
+                <Card.Text className="cardtext">{el.description}</Card.Text>
                 <Card.Footer
                   className="click"
                   onClick={() => {
@@ -268,7 +268,7 @@ const Booking = () => {
             <Card className="card">
               <Card.Img
                 variant="top"
-                src={el.hillstationimg}
+                src={el.img}
                 className="cardimg"
               />
               <Card.Body className="cardbody">
@@ -276,7 +276,7 @@ const Booking = () => {
                   {el.hillstationname}
                 </Card.Title>
                 {/* <Card.Title className='heart' onClick={liked}><HeartIcon/></Card.Title> */}
-                <Card.Text className="cardtext">{el.hillstationdesc}</Card.Text>
+                <Card.Text className="cardtext">{el.description}</Card.Text>
                 <Card.Footer
                   className="click"
                   onClick={() => {

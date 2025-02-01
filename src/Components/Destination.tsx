@@ -14,7 +14,8 @@ useEffect(()=>{
 },[])
 const getData=async()=>{
 const response=await getDestination();
-if(response?.status===200){
+  if (response?.status === 200) {
+  console.log(response?.data,"response");
     setdestinationdata(response?.data)
 }
 }
@@ -38,7 +39,7 @@ const{email}=emailcontext
     else {
       const val: string | null = sessionStorage.getItem("visible");
       const data: favdata = {
-        placeid: el.placeid,
+        placeid: el.placeId,
         img: el.img,
         name: el.name,
         desc: el.description,
@@ -75,7 +76,7 @@ if(response?.status===200){
 const dataBinding=()=>{
     return destinationdata.map((el:any)=>{
         return <>
-         <Card className="card destcard" key={el.placeid}>
+         <Card className="card destcard" key={el.placeId}>
             <Card.Img variant="top" src={el.img} className='cardimg'/>
             <Card.Body className='cardbody'>
               <Card.Title className='cardtitle'>{el.name}</Card.Title>
