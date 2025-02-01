@@ -3,7 +3,7 @@ import { favdata, removefavtype } from "../Interfaces/Interface";
 
 export const getTourData = async (membership:string) => {
   const response = await clientCall(
-    "https://touragencyapplicationserver.onrender.com/myAdmin/getTourData",
+    "https://tour-agency-application.netlify.app//myAdmin/getTourData",
     "POST",
     { membershipvalue: membership }
   );
@@ -11,7 +11,7 @@ export const getTourData = async (membership:string) => {
 };
 export const getMembershipData = async (membershipID:number) => {
   const response = await clientCall(
-    "https://touragencyapplicationserver.onrender.com/myAdmin/getmembershipdata",
+    "https://tour-agency-application.netlify.app//myAdmin/getmembershipdata",
     "POST",
     { membershipvalue: membershipID }
   );
@@ -19,7 +19,7 @@ export const getMembershipData = async (membershipID:number) => {
 };
 export const getCity = async (id:string) => {
   const response = await clientCall(
-    "https://touragencyapplicationserver.onrender.com/myAdmin/getCity",
+    "https://tour-agency-application.netlify.app//myAdmin/getCity",
     "POST",
     { adventure: id }
   );
@@ -27,14 +27,14 @@ export const getCity = async (id:string) => {
 };
 export const getDestination = async () => {
   const response = await clientCall(
-    "https://touragencyapplicationserver.onrender.com/myAdmin/getdestinations",
+    "https://tour-agency-application.netlify.app//myAdmin/getdestinations",
     "GET"
   );
   return response;
 };
-export const getFavourites = async (el:favdata) => {
+export const getFavourites = async (el: favdata) => {
   const response = await clientCall(
-    "https://touragencyapplicationserver.onrender.com/myAdmin/addFavourites",
+    "https://tour-agency-application.netlify.app//myAdmin/addFavourites",
     "POST",
     { data: el }
   );
@@ -43,7 +43,7 @@ export const getFavourites = async (el:favdata) => {
 export const userFavourites = async (email:string) => {
   try {
     const response = await clientCall(
-      "https://touragencyapplicationserver.onrender.com/myAdmin/getFavourites",
+      "https://tour-agency-application.netlify.app//myAdmin/getFavourites",
       "POST",
       { mail: email }
     );
@@ -56,7 +56,7 @@ export const userFavourites = async (email:string) => {
 export const removeFavourites = async (data:removefavtype) => {
   try {
     const response = await clientCall(
-      "https://touragencyapplicationserver.onrender.com/myAdmin/removeFavourites",
+      "https://tour-agency-application.netlify.app//myAdmin/removeFavourites",
       "POST",
       { mydata: data }
     );
@@ -69,7 +69,7 @@ export const removeFavourites = async (data:removefavtype) => {
 export const myBookings = async (email:string) => {
   try {
     const response = await clientCall(
-      "https://touragencyapplicationserver.onrender.com/myAdmin/getBookings",
+      "https://tour-agency-application.netlify.app//myAdmin/getBookings",
       "POST",
       { mydata: email }
     );
