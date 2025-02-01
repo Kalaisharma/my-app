@@ -2,7 +2,7 @@ import { clientCall } from "../Client/axiosCall"
 
 export const getblogdata=async()=>{
     try{
-const response=await clientCall("https://tour-agency-application.netlify.app//myAdmin/blogpost","GET")
+const response=await clientCall("https://touragencyapplicationserver.onrender.com/myAdmin/blogpost","GET")
 console.log(response);
 
 return response}
