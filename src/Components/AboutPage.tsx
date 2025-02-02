@@ -8,7 +8,7 @@ const Aboutpage=()=>{
   useEffect(()=>{window.scrollTo(0,0)},[])
   const navigate=useNavigate()
       const goToHome=()=>{
-navigate('/userpage')
+navigate('/')
       }
       const onBook=()=>{
         let email=sessionStorage.getItem('email')

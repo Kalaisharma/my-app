@@ -106,7 +106,7 @@ if(!bool){
         <div className="aboutpage blogpage">
           <h1 style={{marginTop:"70vh",fontSize:"3rem"}}>Contact Us</h1>
           <div>
-          <span style={{fontSize:"1.5rem"}} onClick={()=>{navigate('/userpage')}}>Home &gt;</span>
+          <span style={{fontSize:"1.5rem"}} onClick={()=>{navigate('/')}}>Home &gt;</span>
           <span style={{fontSize:"1.5rem"}}>Contact Us &gt;</span>
           </div>
         </div>
