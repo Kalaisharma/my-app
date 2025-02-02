@@ -3,7 +3,7 @@ import { favdata, removefavtype } from "../Interfaces/Interface";
 
 export const getTourData = async (membership:string) => {
   const response = await clientCall(
-    "https://mynodeapp-production.up.railway.app//myAdmin/getTourData",
+    "https://mynodeapp-production.up.railway.app/myAdmin/getTourData",
     "POST",
     { membershipvalue: membership }
   );
@@ -11,7 +11,7 @@ export const getTourData = async (membership:string) => {
 };
 export const getMembershipData = async (membershipID:number) => {
   const response = await clientCall(
-    "https://mynodeapp-production.up.railway.app//myAdmin/getmembershipdata",
+    "https://mynodeapp-production.up.railway.app/myAdmin/getmembershipdata",
     "POST",
     { membershipvalue: membershipID }
   );
@@ -19,7 +19,7 @@ export const getMembershipData = async (membershipID:number) => {
 };
 export const getCity = async (id:string) => {
   const response = await clientCall(
-    "https://mynodeapp-production.up.railway.app//myAdmin/getCity",
+    "https://mynodeapp-production.up.railway.app/myAdmin/getCity",
     "POST",
     { adventure: id }
   );
@@ -27,14 +27,14 @@ export const getCity = async (id:string) => {
 };
 export const getDestination = async () => {
   const response = await clientCall(
-    "https://mynodeapp-production.up.railway.app//myAdmin/getdestinations",
+    "https://mynodeapp-production.up.railway.app/myAdmin/getdestinations",
     "GET"
   );
   return response;
 };
 export const getFavourites = async (el: favdata) => {
   const response = await clientCall(
-    "https://mynodeapp-production.up.railway.app//myAdmin/addFavourites",
+    "https://mynodeapp-production.up.railway.app/myAdmin/addFavourites",
     "POST",
     { data: el }
   );
@@ -43,7 +43,7 @@ export const getFavourites = async (el: favdata) => {
 export const userFavourites = async (email:string) => {
   try {
     const response = await clientCall(
-      "https://mynodeapp-production.up.railway.app//myAdmin/getFavourites",
+      "https://mynodeapp-production.up.railway.app/myAdmin/getFavourites",
       "POST",
       { mail: email }
     );
@@ -56,7 +56,7 @@ export const userFavourites = async (email:string) => {
 export const removeFavourites = async (data:removefavtype) => {
   try {
     const response = await clientCall(
-      "https://mynodeapp-production.up.railway.app//myAdmin/removeFavourites",
+      "https://mynodeapp-production.up.railway.app/myAdmin/removeFavourites",
       "POST",
       { mydata: data }
     );
@@ -69,7 +69,7 @@ export const removeFavourites = async (data:removefavtype) => {
 export const myBookings = async (email:string) => {
   try {
     const response = await clientCall(
-      "https://mynodeapp-production.up.railway.app//myAdmin/getBookings",
+      "https://mynodeapp-production.up.railway.app/myAdmin/getBookings",
       "POST",
       { mydata: email }
     );
