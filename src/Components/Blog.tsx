@@ -223,7 +223,7 @@ const TipsandBlogs = () => {
           <span
             style={{ fontSize: "1.5rem" }}
             onClick={() => {
-              navigate("/userpage");
+              navigate("/");
             }}
           >
             Home &gt;
